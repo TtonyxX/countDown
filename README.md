@@ -1,2 +1,2 @@
 # countDownSAT
-Countdown to November SAT 2018
+Count down to the SAT's
