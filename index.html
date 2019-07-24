@@ -77,6 +77,13 @@
       var currentIndex = 0;
       var countDownDate;
 
+      if(localStorage.test == "act") {
+        dates = actDates;
+        selectedTest = "ACT";
+        $("#switch").prop('checked', false); 
+        $('#switch').data('checked', "1");
+      }
+
       function countDown() {
         countDownDate = new Date(dates[currentIndex]);
         startTimer("clock", countDownDate);
