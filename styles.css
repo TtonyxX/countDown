@@ -2,8 +2,8 @@
   margin-top: 8vh;
   font-family: Helvetica, sans-serif;
   font-size: calc(50px + 6vw);
-
   font-weight: bold;
+  line-height: normal;
 }
 
 #clock span {
