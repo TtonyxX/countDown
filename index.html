@@ -84,6 +84,10 @@
         $('#switch').data('checked', "1");
       }
 
+      if(localStorage.currentIndex != null) {
+        currentIndex = localStorage.currentIndex;
+      }
+
       function countDown() {
         countDownDate = new Date(dates[currentIndex]);
         startTimer("clock", countDownDate);
@@ -119,7 +123,7 @@
       function right() {
         if (currentIndex + 1 < dates.length) {
           currentIndex++;
-          console.log(currentIndex);
+          localStorage.currentIndex = currentIndex;
           $("#header").html(dates[currentIndex].split(" ")[0] + " " + selectedTest);
           stopTimer();
           countDown();
@@ -129,6 +133,7 @@
       function left() {
         if (currentIndex - 1 >= 0) {
           currentIndex--;
+          localStorage.currentIndex = currentIndex;
           $("#header").html(dates[currentIndex].split(" ")[0] + " " + selectedTest);
           stopTimer();
           countDown();
@@ -141,6 +146,7 @@
           localStorage.test = "sat";
           selectedTest = "SAT";
           dates = satDates;
+          currentIndex = 0;
           stopTimer();
           countDown();
         } else {
@@ -148,6 +154,7 @@
           localStorage.test = "act";
           selectedTest = "ACT";
           dates = actDates;
+          currentIndex = 0;
           stopTimer();
           countDown();
         }
