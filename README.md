@@ -1,2 +1,2 @@
-# countDownSAT
-Count down to the SAT's
+# Countdown
+Count down to the SAT and ACT
