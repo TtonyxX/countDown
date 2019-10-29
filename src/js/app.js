@@ -39,8 +39,8 @@ function countDown() {
   if (distance < 0) {
     dates.shift();
     countDownDate = new Date(dates[0]).getTime();
-    countDown();
     stopTimer();
+    countDown();
   }
 }
 
