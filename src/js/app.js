@@ -1,5 +1,5 @@
 var satDates = ["November 2, 2019 7:50:00", "December 7, 2019 7:50:00", "March 14, 2020 7:50:00", "May 2, 2020 7:50:00", "June 6, 2020 7:50:00"];
-var actDates = ["October 26, 2019 7:50:00", "December 14, 2019 7:50:00", "Feb 8, 2020 7:50:00", "Apr 4, 2020 7:50:00", "June 13, 2020 7:50:00", "July 18, 2020 7:50:00"];
+var actDates = ["December 14, 2019 7:50:00", "Feb 8, 2020 7:50:00", "Apr 4, 2020 7:50:00", "June 13, 2020 7:50:00", "July 18, 2020 7:50:00"];
 var selectedTest = "SAT";
 var dates = satDates;
 var currentIndex = 0;
