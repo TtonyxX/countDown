@@ -87,3 +87,28 @@ $('#switch').change(function() {
     countDown();
   }
 });
+
+$("#settings-btn").click(function() {
+  $("#settings-background").show();
+  animateCSS("#settings-background", "fadeIn");
+});
+
+$("#exit-settings").click(function () {
+  animateCSS("#settings-background", "fadeOut", function() {
+      $("#settings-background").hide();
+  })
+});
+
+function animateCSS(element, animationName, callback) {
+  const node = document.querySelector(element)
+  node.classList.add('animated', animationName)
+
+  function handleAnimationEnd() {
+      node.classList.remove('animated', animationName)
+      node.removeEventListener('animationend', handleAnimationEnd)
+
+      if (typeof callback === 'function') callback()
+  }
+
+  node.addEventListener('animationend', handleAnimationEnd)
+}

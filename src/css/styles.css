@@ -90,3 +90,60 @@ span.turn {
 .arrow:hover {
   transform: scale(1.08);
 }
+
+#settings-btn {
+  font-size: 40px;
+  position: absolute;
+  left: 5px; 
+  top: 5px;
+}
+
+#settings-btn {
+  transition: all 0.3s;
+}
+
+#settings-btn:hover {
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+#settings-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+  transition: all 0.9s;
+}
+
+#settings-window {
+  width: 45vw;
+  min-width: 300px;
+  height: 300px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: calc(100vh / 2 - 150px);
+  padding: 0px 5px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.exit {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  color: red;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: all 0.3s;
+}
+
+.exit:hover {
+  color: rgb(239, 92, 69);
+  cursor: pointer;
+}

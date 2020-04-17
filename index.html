@@ -22,12 +22,17 @@
       rel="stylesheet"
       href="src/css/styles.css"
     />
+    <link rel="stylesheet" href="src/css/animate.css">
+    <script src="https://use.fontawesome.com/6a4e2252df.js"></script>
 
     <title>Countdown</title>
   </head>
 
 
   <body>
+    
+    <i id="settings-btn" class="fas fa-cog"></i>
+
     <center><p id="header"></p></center>
 
     <div id="test-toggle">
@@ -64,6 +69,19 @@
         <i class="fas fa-arrow-right"></i>
       </button>
     </center>
+
+    <div id="settings-background">
+      <center>
+          <div id="settings-window">
+              <button id="exit-settings" class="exit">&times;</button>
+              <h2 style="line-height: 1.9; margin-bottom: 0px">
+                  <strong>Settings</strong>
+              </h2>
+              
+
+          </div>
+      </center>
+    </div>
 
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
