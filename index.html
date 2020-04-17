@@ -36,17 +36,6 @@
 
     <center><p id="header"></p></center>
 
-    <div id="test-toggle">
-      <p>ACT</p>
-      <div style="margin-left: 4px; margin-right: 10px;">
-        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect arrow" for="switch">
-          <input type="checkbox" id="switch" class="mdl-switch__input" checked>
-          <span class="mdl-switch__label"></span>
-        </label>
-      </div>
-      <p>SAT</p>
-    </div>
-
     <div id="clock"></div>
     <div id="units">
       <span>Days</span>
@@ -55,7 +44,7 @@
       <span>Seconds</span>
     </div>
 
-    <center style="margin-top: 30vh;">
+    <div id="arrow-container">
       <button
         class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored arrow"
         onclick="left()"
@@ -69,17 +58,25 @@
       >
         <i class="fas fa-arrow-right"></i>
       </button>
-    </center>
+    </div>
 
     <div id="settings-background">
       <center>
           <div id="settings-window">
               <button id="exit-settings" class="exit">&times;</button>
-              <h2 style="line-height: 1.9; margin-bottom: 0px">
-                  <strong>Settings</strong>
-              </h2>
-              
-
+              <h2>Test</h2>
+              <div id="test-toggle">
+                <p>ACT</p>
+                <div style="margin-left: 4px; margin-right: 10px;">
+                  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect arrow" for="switch">
+                    <input type="checkbox" id="switch" class="mdl-switch__input" checked>
+                    <span class="mdl-switch__label"></span>
+                  </label>
+                </div>
+                <p>SAT</p>
+              </div>
+              <h2>Color</h2>
+              <div id="colors-container"></div>
           </div>
       </center>
     </div>

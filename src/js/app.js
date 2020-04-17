@@ -89,11 +89,13 @@ $('#switch').change(function() {
 });
 
 $("#settings-btn").click(function() {
+  $("#settings-window").fadeIn();
   $("#settings-background").show();
   animateCSS("#settings-background", "fadeIn");
 });
 
 $("#exit-settings").click(function () {
+  $("#settings-window").fadeOut();
   animateCSS("#settings-background", "fadeOut", function() {
       $("#settings-background").hide();
   })
@@ -111,4 +113,23 @@ function animateCSS(element, animationName, callback) {
   }
 
   node.addEventListener('animationend', handleAnimationEnd)
+}
+
+var colors = ["white", "red", "#FC4444", "green", "blue", "#E27D5F", "#85CDCA", "#C38D9D", "#40B3A2", "#DAAD85", "#FBEEC1", "#5CDB94", "#EDF5E0", "#96CAEF"];
+for(let i=0; i<colors.length; i++) {
+  var colorCode = "<div class='color' data-color='" + colors[i] + "' style='background-color: " + colors[i] + ";' onclick='colorclick(this)'></div>";
+  $("#colors-container").html($("#colors-container").html() + colorCode);
+}
+
+if(!localStorage['color']) {
+  localStorage['color'] = 'white';
+}
+$($('.color').toArray()[colors.indexOf(localStorage['color'])]).trigger('click');
+
+
+function colorclick(element) {
+  $('body').css("background-color", $(element).data('color'));
+  $(".color").css("border-color", "black");
+  $(element).css("border-color", "#4287f5");
+  localStorage['color'] = $(element).data('color');
 }
